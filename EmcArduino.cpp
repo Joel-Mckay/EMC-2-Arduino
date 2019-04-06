@@ -771,37 +771,37 @@ void setup()
   if(spindleTach>0){int result=determinInterrupt(spindleTach);attachInterrupt(result,countSpindleRevs,FALLING);}
   
   // Setup Min limit switches.
-  if(useRealMinX){pinMode(xMinPin,INPUT);if(!xMinPinInverted)digitalWriteFast(xMinPin,HIGH);}
-  if(useRealMinY){pinMode(yMinPin,INPUT);if(!yMinPinInverted)digitalWriteFast(yMinPin,HIGH);}
-  if(useRealMinZ){pinMode(zMinPin,INPUT);if(!zMinPinInverted)digitalWriteFast(zMinPin,HIGH);}
-  if(useRealMinA){pinMode(aMinPin,INPUT);if(!aMinPinInverted)digitalWriteFast(aMinPin,HIGH);}
-  if(useRealMinB){pinMode(bMinPin,INPUT);if(!bMinPinInverted)digitalWriteFast(bMinPin,HIGH);}
-  if(useRealMinC){pinMode(cMinPin,INPUT);if(!cMinPinInverted)digitalWriteFast(cMinPin,HIGH);}
-  if(useRealMinU){pinMode(uMinPin,INPUT);if(!uMinPinInverted)digitalWriteFast(uMinPin,HIGH);}
-  if(useRealMinV){pinMode(vMinPin,INPUT);if(!vMinPinInverted)digitalWriteFast(vMinPin,HIGH);}
-  if(useRealMinW){pinMode(wMinPin,INPUT);if(!wMinPinInverted)digitalWriteFast(wMinPin,HIGH);}
+  if(useRealMinX){pinMode(xMinPin,INPUT_PULLUP);if(!xMinPinInverted)digitalWriteFast(xMinPin,HIGH);}
+  if(useRealMinY){pinMode(yMinPin,INPUT_PULLUP);if(!yMinPinInverted)digitalWriteFast(yMinPin,HIGH);}
+  if(useRealMinZ){pinMode(zMinPin,INPUT_PULLUP);if(!zMinPinInverted)digitalWriteFast(zMinPin,HIGH);}
+  if(useRealMinA){pinMode(aMinPin,INPUT_PULLUP);if(!aMinPinInverted)digitalWriteFast(aMinPin,HIGH);}
+  if(useRealMinB){pinMode(bMinPin,INPUT_PULLUP);if(!bMinPinInverted)digitalWriteFast(bMinPin,HIGH);}
+  if(useRealMinC){pinMode(cMinPin,INPUT_PULLUP);if(!cMinPinInverted)digitalWriteFast(cMinPin,HIGH);}
+  if(useRealMinU){pinMode(uMinPin,INPUT_PULLUP);if(!uMinPinInverted)digitalWriteFast(uMinPin,HIGH);}
+  if(useRealMinV){pinMode(vMinPin,INPUT_PULLUP);if(!vMinPinInverted)digitalWriteFast(vMinPin,HIGH);}
+  if(useRealMinW){pinMode(wMinPin,INPUT_PULLUP);if(!wMinPinInverted)digitalWriteFast(wMinPin,HIGH);}
 
   // Setup Max limit switches.
-  if(useRealMaxX){pinMode(xMaxPin,INPUT);if(!xMaxPinInverted)digitalWriteFast(xMaxPin,HIGH);}
-  if(useRealMaxY){pinMode(yMaxPin,INPUT);if(!yMaxPinInverted)digitalWriteFast(yMaxPin,HIGH);}
-  if(useRealMaxZ){pinMode(zMaxPin,INPUT);if(!zMaxPinInverted)digitalWriteFast(zMaxPin,HIGH);}
-  if(useRealMaxA){pinMode(aMaxPin,INPUT);if(!aMaxPinInverted)digitalWriteFast(aMaxPin,HIGH);}
-  if(useRealMaxB){pinMode(bMaxPin,INPUT);if(!bMaxPinInverted)digitalWriteFast(bMaxPin,HIGH);}
-  if(useRealMaxC){pinMode(cMaxPin,INPUT);if(!cMaxPinInverted)digitalWriteFast(cMaxPin,HIGH);}
-  if(useRealMaxU){pinMode(uMaxPin,INPUT);if(!uMaxPinInverted)digitalWriteFast(uMaxPin,HIGH);}
-  if(useRealMaxV){pinMode(vMaxPin,INPUT);if(!vMaxPinInverted)digitalWriteFast(vMaxPin,HIGH);}
-  if(useRealMaxW){pinMode(wMaxPin,INPUT);if(!wMaxPinInverted)digitalWriteFast(wMaxPin,HIGH);}
+  if(useRealMaxX){pinMode(xMaxPin,INPUT_PULLUP);if(!xMaxPinInverted)digitalWriteFast(xMaxPin,HIGH);}
+  if(useRealMaxY){pinMode(yMaxPin,INPUT_PULLUP);if(!yMaxPinInverted)digitalWriteFast(yMaxPin,HIGH);}
+  if(useRealMaxZ){pinMode(zMaxPin,INPUT_PULLUP);if(!zMaxPinInverted)digitalWriteFast(zMaxPin,HIGH);}
+  if(useRealMaxA){pinMode(aMaxPin,INPUT_PULLUP);if(!aMaxPinInverted)digitalWriteFast(aMaxPin,HIGH);}
+  if(useRealMaxB){pinMode(bMaxPin,INPUT_PULLUP);if(!bMaxPinInverted)digitalWriteFast(bMaxPin,HIGH);}
+  if(useRealMaxC){pinMode(cMaxPin,INPUT_PULLUP);if(!cMaxPinInverted)digitalWriteFast(cMaxPin,HIGH);}
+  if(useRealMaxU){pinMode(uMaxPin,INPUT_PULLUP);if(!uMaxPinInverted)digitalWriteFast(uMaxPin,HIGH);}
+  if(useRealMaxV){pinMode(vMaxPin,INPUT_PULLUP);if(!vMaxPinInverted)digitalWriteFast(vMaxPin,HIGH);}
+  if(useRealMaxW){pinMode(wMaxPin,INPUT_PULLUP);if(!wMaxPinInverted)digitalWriteFast(wMaxPin,HIGH);}
 
   // Setup Homing switches.
-  if(useRealHomeX){pinMode(xHomePin,INPUT);if(!xHomePinInverted)digitalWriteFast(xHomePin,HIGH);}
-  if(useRealHomeY){pinMode(yHomePin,INPUT);if(!yHomePinInverted)digitalWriteFast(yHomePin,HIGH);}
-  if(useRealHomeZ){pinMode(zHomePin,INPUT);if(!zHomePinInverted)digitalWriteFast(zHomePin,HIGH);}
-  if(useRealHomeA){pinMode(aHomePin,INPUT);if(!aHomePinInverted)digitalWriteFast(aHomePin,HIGH);}
-  if(useRealHomeB){pinMode(bHomePin,INPUT);if(!bHomePinInverted)digitalWriteFast(bHomePin,HIGH);}
-  if(useRealHomeC){pinMode(cHomePin,INPUT);if(!cHomePinInverted)digitalWriteFast(cHomePin,HIGH);}
-  if(useRealHomeU){pinMode(uHomePin,INPUT);if(!uHomePinInverted)digitalWriteFast(uHomePin,HIGH);}
-  if(useRealHomeV){pinMode(vHomePin,INPUT);if(!vHomePinInverted)digitalWriteFast(vHomePin,HIGH);}
-  if(useRealHomeW){pinMode(wHomePin,INPUT);if(!wHomePinInverted)digitalWriteFast(wHomePin,HIGH);}
+  if(useRealHomeX){pinMode(xHomePin,INPUT_PULLUP);if(!xHomePinInverted)digitalWriteFast(xHomePin,HIGH);}
+  if(useRealHomeY){pinMode(yHomePin,INPUT_PULLUP);if(!yHomePinInverted)digitalWriteFast(yHomePin,HIGH);}
+  if(useRealHomeZ){pinMode(zHomePin,INPUT_PULLUP);if(!zHomePinInverted)digitalWriteFast(zHomePin,HIGH);}
+  if(useRealHomeA){pinMode(aHomePin,INPUT_PULLUP);if(!aHomePinInverted)digitalWriteFast(aHomePin,HIGH);}
+  if(useRealHomeB){pinMode(bHomePin,INPUT_PULLUP);if(!bHomePinInverted)digitalWriteFast(bHomePin,HIGH);}
+  if(useRealHomeC){pinMode(cHomePin,INPUT_PULLUP);if(!cHomePinInverted)digitalWriteFast(cHomePin,HIGH);}
+  if(useRealHomeU){pinMode(uHomePin,INPUT_PULLUP);if(!uHomePinInverted)digitalWriteFast(uHomePin,HIGH);}
+  if(useRealHomeV){pinMode(vHomePin,INPUT_PULLUP);if(!vHomePinInverted)digitalWriteFast(vHomePin,HIGH);}
+  if(useRealHomeW){pinMode(wHomePin,INPUT_PULLUP);if(!wHomePinInverted)digitalWriteFast(wHomePin,HIGH);}
 
   // Enable stepper drivers.
   pinMode(xEnablePin,OUTPUT);digitalWrite(xEnablePin,LOW);
@@ -848,19 +848,19 @@ void setup()
   pinMode(chanWms1,OUTPUT);pinMode(chanWms2,OUTPUT);pinMode(chanWms3,OUTPUT);
   
   // Setup eStop, power, start, stop, pause, resume, program step, spindle, coolant, LED and probe pins.
-  if(useEstopSwitch){pinMode(eStopPin,INPUT);if(!eStopPinInverted){digitalWriteFast(eStopPin,HIGH);}}
-  if(usePowerSwitch){pinMode(powerPin,INPUT);if(!powerPinInverted){digitalWriteFast(powerPin,HIGH);}}
-  if(useProbe){pinMode(probePin,INPUT);if(!probePinInverted){digitalWriteFast(probePin,HIGH);}}
-  if(useStartSwitch){pinMode(startPin,INPUT);if(!startPinInverted){digitalWriteFast(startPin,HIGH);}}
-  if(useStopSwitch){pinMode(stopPin,INPUT);if(!stopPinInverted){digitalWriteFast(stopPin,HIGH);}}
-  if(usePauseSwitch){pinMode(pausePin,INPUT);if(!pausePinInverted){digitalWriteFast(pausePin,HIGH);}}
-  if(useResumeSwitch){pinMode(resumePin,INPUT);if(!resumePinInverted){digitalWriteFast(resumePin,HIGH);}}
-  if(useStepSwitch){pinMode(stepPin,INPUT);if(!stepPinInverted){digitalWriteFast(stepPin,HIGH);}}
+  if(useEstopSwitch){pinMode(eStopPin,INPUT_PULLUP);if(!eStopPinInverted){digitalWriteFast(eStopPin,HIGH);}}
+  if(usePowerSwitch){pinMode(powerPin,INPUT_PULLUP);if(!powerPinInverted){digitalWriteFast(powerPin,HIGH);}}
+  if(useProbe){pinMode(probePin,INPUT_PULLUP);if(!probePinInverted){digitalWriteFast(probePin,HIGH);}}
+  if(useStartSwitch){pinMode(startPin,INPUT_PULLUP);if(!startPinInverted){digitalWriteFast(startPin,HIGH);}}
+  if(useStopSwitch){pinMode(stopPin,INPUT_PULLUP);if(!stopPinInverted){digitalWriteFast(stopPin,HIGH);}}
+  if(usePauseSwitch){pinMode(pausePin,INPUT_PULLUP);if(!pausePinInverted){digitalWriteFast(pausePin,HIGH);}}
+  if(useResumeSwitch){pinMode(resumePin,INPUT_PULLUP);if(!resumePinInverted){digitalWriteFast(resumePin,HIGH);}}
+  if(useStepSwitch){pinMode(stepPin,INPUT_PULLUP);if(!stepPinInverted){digitalWriteFast(stepPin,HIGH);}}
   if(powerLedPin > 0){pinMode(powerLedPin,OUTPUT);digitalWriteFast(powerLedPin,HIGH);}
   if(eStopLedPin>0){pinMode(eStopLedPin,OUTPUT);digitalWriteFast(eStopLedPin,LOW);}
   if(spindleEnablePin>0){pinMode(spindleEnablePin,OUTPUT);digitalWriteFast(spindleEnablePin,HIGH);}
   if(spindleDirection>0){pinMode(spindleDirection,OUTPUT);digitalWriteFast(spindleDirection,LOW);}
-  if(spindleTach>0){pinMode(spindleTach,INPUT);digitalWriteFast(spindleTach,HIGH);}
+  if(spindleTach>0){pinMode(spindleTach,INPUT_PULLUP);digitalWriteFast(spindleTach,HIGH);}
   if(coolantMistPin>0){pinMode(coolantMistPin,OUTPUT);digitalWriteFast(coolantMistPin,LOW);}
   if(coolantFloodPin>0){pinMode(coolantFloodPin,OUTPUT);digitalWriteFast(coolantFloodPin,LOW);}
   if(powerSupplyPin>0){pinMode(powerSupplyPin,OUTPUT);digitalWriteFast(powerSupplyPin,psuState);}
